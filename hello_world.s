@@ -9,8 +9,8 @@
 
 .align 4 // Aligns the following data/code on a 4-byte boundary for efficient memory access.
 .section .rodata // New section called .rodata, read only data
-
 // ALL CONSTANT DATA GOES HERE
+
 // Label    string   string contain message
 hello_msg:  .asciz "Hello World from assembly!\n"
 //Defines a message "Hello World from assembly!\n" and assigns it to the label hello_msg
