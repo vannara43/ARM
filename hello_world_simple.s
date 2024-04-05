@@ -17,5 +17,5 @@ main: //Beginning of main function.
     // Assembly program here
     ldr r0, =hello_msg // Load message address into register.
     bl printf //Call printf function.
-    mov r0, #0 //Set return code.
+    mov r0, #0 // Return code for your program (must be 8 bits)
     pop {pc}//Return to caller.
