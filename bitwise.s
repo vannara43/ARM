@@ -31,7 +31,7 @@ main: @ int main(int argc, char **argv)
     ldr r0,=fmt_specifier
     ldr r1,=value1       /* load address of value1 into R1 */
     ldr r2,=value2       /* load address of value2 into R2 */
-    bl scanf
+    bl scanf            // call scanf
 
     //printf("%u AND %u is %u\n", value1, value2, value1 & value2);
     ldr r0,=prompt_AND
