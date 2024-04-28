@@ -35,4 +35,5 @@ my_value:           .int 0
     //calls printf with bl
 
     // Return r0 back to 0 with mov
+    // Return r1 back to 0 with mov
     // End program with pop {pc}

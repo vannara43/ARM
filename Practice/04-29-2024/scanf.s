@@ -21,12 +21,12 @@ my_value:           .int 0
 
     /* USE PRINTF TO PRINT PROMPT1 */
     // Assign prompt1 to r0 with ldr
-    //calls printf
+    // calls printf
 
     /* USE SCANF FOR INPUT */
     // assign fmt to r0 with ldr
     // assign my_value to r1 with ldr
-    //calls scanf
+    // calls scanf
 
     /* PRINT YOUR INPUT VALUE HERE USING PRINTF */
     // Assign print_input_value to r0 with ldr
