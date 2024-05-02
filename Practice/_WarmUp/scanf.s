@@ -20,18 +20,18 @@ main:
 
     /* PROMPT TO ENTER VALUE */
     ldr r0, =enter_value_prompt // Assign enter_value_prompt to r0 with ldr
-    bl printf //calls printf
+    bl printf // calls printf
 
     /* USE SCANF FOR INPUT | CODE HERE */
-    // assign fmt_specifier to r0 with ldr
-    // assign my_value to r1 with ldr
-    //calls scanf
+    // assign fmt_specifier to r0 with ldr | ldr r0, =fmt_specifier
+    // assign my_value to r1 with ldr | ldr r1, =my_value
+    // call scanf: bl scanf
 
     /* PROMPT TO DISPLAY USER INPUT | CODE HERE */
-    // Assign display_input_value to r0 with ldr
-    // Assign my_value to r1 with ldr
-    // Use ldr r1, [r1] to dereference r1 memory address
-    //Calls printf with bl
+    // Assign display_input_value to r0 with ldr | ldr r0, =display_input_value
+    // Assign my_value to r1 with ldr | ldr r1, =my_value
+    // Use ldr r1, [r1] to dereference r1 memory address | ldr r1, [r1]
+    // Calls printf with bl | bl printf
 
     mov r0, #0 // Return r0 back to 0 with mov
     mov r1, #0 // Return r1 back to 0 with mov

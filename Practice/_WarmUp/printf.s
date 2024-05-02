@@ -10,7 +10,7 @@ hello_msg:  .asciz "Hello World!\n" // Make hello world label and assign a strin
 .text
 main:
     push {lr}
-    // Load hello_msg to r0
-    // Call printf with bl
-    // Return r0 back to 0 with mov
+    // Load hello_msg to r0: ldr r0, =hello_msg
+    // Call printf with bl: bl printf
+    mov r0, #0 // Return 0
     pop {pc}

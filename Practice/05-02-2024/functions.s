@@ -28,8 +28,8 @@ function3:
 
 main:
     push {lr}
-    // Call Function 1
-    // Call Function 2
-    // Call Function 3
+    // Call function1 with bl: bl function1
+    // Call function2 with bl: bl function2
+    // Call function3 with bl: bl function3
     mov r0, #0
     pop {pc}
