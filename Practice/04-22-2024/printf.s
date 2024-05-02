@@ -6,7 +6,7 @@
 .section .rodata         // Add .section and .rodata here
 hello_msg:  .asciz "Hello World!\n" // Make hello world label and assign a string message
 
-/* Main Function */
+/* CODE SECTION */
 .align 4                 // Add align 4 here
 .text                    // Add .text here for code only
 main:                    // Main label here

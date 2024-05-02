@@ -1,22 +1,16 @@
-/* ASSIGN A GLOBAL FUNCTION */
-// Make main as a global function
+.global main
 
-/* READ_ONLY SECTION: Add your strings here */
-// Add align 4 here
-// Add .section and .rodata here
-// Make hello world label and assign a string message
-hello_msg:  .asciz "Hello World!\n"
+/* CONSTANT DATA SECTION: Add your strings here */
+.align 4
+.section .rodata
+hello_msg:  .asciz "Hello World!\n" // Make hello world label and assign a string message
 
-/* CONSTANT DATA SECTION */ // Delete this line
-// Add align 4 here               // Delete this line
-// Add .section and .rodata here  // Delete this line
-
-/* Main Function */
-// Add align 4 here
-// Add .text here for code only
-// Main label here
-    // Push to {lr}
-    // Load hello_msg to r0
-    // Call printf with bl
-    // Return r0 back to 0 with mov
-    // End program with pop {pc}
+/* CODE SECTION */
+.align 4
+.text
+main:
+    push {lr}
+    ldr r0, =hello_msg // Load hello_msg to r0
+    bl printf // Call printf with bl
+    mov r0, #0 // Return r0 back to 0 with mov
+    pop {pc}

@@ -1,39 +1,38 @@
-/* ASSIGN A GLOBAL FUNCTION */
-// Make main as a global function
+.global main
 
-/* READ_ONLY SECTION: Add your strings here */
-// Add align 4 here
-// Add .section and .rodata here
-prompt1:            .asciz "Enter a value: \n"
-fmt:                .asciz "%d"
-print_input_value:  .asciz "You entered the number %d\n"
+/* CONSTANT DATA SECTION: Add your strings here */
+.align 4
+.section .rodata
+enter_value_prompt:     .asciz "Enter a value: " // prompt to enter value
+fmt_specifier:          .asciz "%d" // This is needed for scanf
+display_input_value:    .asciz "You entered the number %d\n" // display the user input
 
-/* CONSTANT DATA SECTION */
-// Add align 4 here
-// Add .section and .rodata here
-my_value:           .int 0
+/* NON-CONSTANT DATA SECTION */
+.align 4
+.section .data
+my_value:               .int 0
 
-/* Main Function */
-// Add align 4 here
-// Add .text here for code only
-// Main label here
-    // Push to {lr}
+/* CODE SECTION */
+.align 4
+.text
+main:
+    push {lr}
 
-    /* USE PRINTF TO PRINT PROMPT1 */
-    // Assign prompt1 to r0 with ldr
-    //calls printf
+    /* PROMPT TO ENTER VALUE */
+    ldr r0, =enter_value_prompt // Assign enter_value_prompt to r0 with ldr
+    bl printf //calls printf
 
     /* USE SCANF FOR INPUT */
-    // assign fmt to r0 with ldr
+    // assign fmt_specifier to r0 with ldr
     // assign my_value to r1 with ldr
     //calls scanf
 
-    /* PRINT YOUR INPUT VALUE HERE USING PRINTF */
-    // Assign print_input_value to r0 with ldr
+    /* PROMPT TO DISPLAY USER INPUT */
+    // Assign display_input_value to r0 with ldr
     // Assign my_value to r1 with ldr
-    // use ldr r1, [r1] to dereference r1 memory address
-    //calls printf with bl
+    // Use ldr r1, [r1] to dereference r1 memory address
+    //Calls printf with bl
 
-    // Return r0 back to 0 with mov
-    // Return r1 back to 0 with mov
-    // End program with pop {pc}
+    mov r0, #0 // Return r0 back to 0 with mov
+    mov r1, #0 // Return r1 back to 0 with mov
+    pop {pc}// End program with pop {pc}

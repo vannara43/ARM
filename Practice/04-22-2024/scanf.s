@@ -9,12 +9,12 @@ prompt1:            .asciz "Enter a value: "
 fmt:                .asciz "%d"
 print_input_value:  .asciz "You entered the number %d\n"
 
-/* CONSTANT DATA SECTION */
+/* NON-CONSTANT DATA SECTION */
 .align 4 // Add align 4 here
 .section .data // Add .section and .rodata here
 my_value:           .int 0
 
-/* Main Function */
+/* CODE SECTION */
 .align 4 // Add .align 4 here
 .text  // Add .text here for code only
 main: // Main label here
