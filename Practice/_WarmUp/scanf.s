@@ -22,12 +22,12 @@ main:
     ldr r0, =enter_value_prompt // Assign enter_value_prompt to r0 with ldr
     bl printf //calls printf
 
-    /* USE SCANF FOR INPUT */
+    /* USE SCANF FOR INPUT | CODE HERE */
     // assign fmt_specifier to r0 with ldr
     // assign my_value to r1 with ldr
     //calls scanf
 
-    /* PROMPT TO DISPLAY USER INPUT */
+    /* PROMPT TO DISPLAY USER INPUT | CODE HERE */
     // Assign display_input_value to r0 with ldr
     // Assign my_value to r1 with ldr
     // Use ldr r1, [r1] to dereference r1 memory address
